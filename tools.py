@@ -86,7 +86,7 @@ def yearMatch(line):
   return
 
 def resolutionMatch(line):
-  resolutionmatch = re.compile('HD|SD|480p|720p|1080p|4K|UHD WEB x264-XLF|WEB x264-XLF').search(line)
+  resolutionmatch = re.compile('HD|SD|720p WEB x264-XLF|WEB x264-XLF').search(line)
   if resolutionmatch:
     return resolutionmatch
   return

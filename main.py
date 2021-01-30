@@ -4,7 +4,7 @@ import streamClasses
 import wget
 import sys
 
-#ipttvurl = 'C:\Users\Pokis\Desktop\m3u\TV_PL1.m3u' #replace url with your link, or comment this line out and put the filename in the streamlist below.
+#ipttvurl = r"C:\Users\000\Desktop\iptmovies.m3u" #replace url with your link, or comment this line out and put the filename in the streamlist below.
 '''for i in range(20):
   url = baseurl + str(i)
   print(wget.download(url, ('m3u/apollotvshows-'+str(i)+'.m3u')))
@@ -12,4 +12,3 @@ import sys
 
 #print(wget.download(iptmovieurl, ('m3u/iptmovies.m3u'))) #if not downloading comment out this line.
 apollomovies = streamClasses.rawStreamList('m3u/iptmovies.m3u')
-

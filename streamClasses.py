@@ -28,7 +28,7 @@ class Movie(object):
     :returns: the fully constructed filename with type directory ea. "movies/The Longest Yard - 720p.strm"
     :rtype: str
     '''
-    filestring = [self.title.replace(':','-').replace('*','_').replace('/','_').replace('?','').replace('-',' ')]
+    filestring = [self.title.replace(':','-').replace('*','_').replace('/','_').replace('?','')]
     if self.year:
       if self.year[0] == "(":
         filestring.append(self.year)
@@ -39,7 +39,7 @@ class Movie(object):
       self.year = "A"
     if self.resolution:
       filestring.append(self.resolution)
-    return ('movies/' + self.title.replace(':','-').replace('*','_').replace('-',' ').replace('/','_').replace('?','') + ' - ' + self.year + "/" + ' - '.join(filestring) + ".strm")
+    return ('movies/' + self.title.replace(':','-').replace('*','_').replace('/','_').replace('?','') + ' - ' + self.year + "/" + ' - '.join(filestring) + ".strm")
   
   def makeStream(self):
     filename = self.getFilename()
